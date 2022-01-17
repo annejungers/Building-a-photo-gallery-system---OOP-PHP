@@ -18,16 +18,51 @@
 
         */
 
-        $user = new User();
-        $result_set = $user->find_all_users();
+        /*
+        //function to find the user by id
+        $result_set = User::find_all_users(); // static function
 
         while($row = mysqli_fetch_array($result_set)){
             echo $row['username']  . "<br>";
 
         }
 
+        */
+        /*
+        //function to find the user by its id
+        $found_user = User::find_user_by_id(2); // static function
 
+        $user = User::instantiation($found_user);
+
+        echo $user->id;
+
+        echo "<br>";
+
+        */
+        /*
+        $users = User::find_all_users(); 
+
+        foreach($users as $user){
+
+            echo $user->username . "<br>";
+
+        }
+
+        */
+
+        $found_user = User::find_user_by_id(2);
+        echo $found_user->username;
+        
+
+        
+
+
+
+
+       
         ?>
+
+
 
         <ol class="breadcrumb">
             <li>
